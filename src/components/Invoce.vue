@@ -1,7 +1,7 @@
 <template lang="">
-    <div v-if="openwindow == true" @click="openwindow =!openwindow" class="absolute top-0 w-full h-screen z-[3] "></div>
-    <div v-if="openwindow == true" class="overlay absolute top-0 w-[40%] h-full z-[5] bg-[#44416c] rounded-tr-[40px]">
-        <div class="new relative w-full h-screen flex px-14 pt-24">
+    <div v-if="openwindow == true" @click="openwindow =!openwindow" class="fixed top-0 w-full h-screen z-[3] "></div>
+    <div v-if="openwindow == true" class="overlay left-[133px] fixed top-0 w-[35%] h-full z-[5] bg-[#44416c] rounded-tr-[40px]">
+        <div class="new relative w-full h-full flex px-14 py-24 overflow-y-scroll ">
             <Newinvoice />
         </div>
     </div>
@@ -64,5 +64,7 @@ export default {
         
         
     }
-    
+    .new::-webkit-scrollbar {
+    display: none;
+}    
 </style>
